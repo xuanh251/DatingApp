@@ -15,7 +15,7 @@ export class NavComponent implements OnInit {
     this.authService.login(this.model).subscribe(next => {
       console.log('Dang nhap thanh cong');
     }, err => {
-      console.log('Dang nhap that bai');
+      console.log(err);
     });
   }
   // ham nay tra ve bool --> hai dau !! de xac dinh co gia tri hay ko
