@@ -21,7 +21,7 @@ export class ErrorInterceptor implements HttpInterceptor {
                 // so sanh kieu error co phai la http...
                 if (error instanceof HttpErrorResponse) {
                     if (error.status === 401) {
-                        return throwError(error.statusText);
+                        return throwError('Đăng nhập thất bại!');
                     }
                     const applicationError = error.headers.get('Application-Error');
                     if (applicationError) {
